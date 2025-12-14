@@ -1,0 +1,17 @@
+
+# GitHub Pages configuration for Jekyll
+theme: jekyll-theme-cayman
+
+title: "Cybersecurity Portfolio — Mohamed mOoka"
+description: "Incident Response | DFIR"
+markdown: kramdown
+
+# Optional SEO settings
+author: "Mohamed mOoka"
+url: "https://mohamedmOoka.github.io"
+baseurl: "/cybersec-portfolio"
+
+# Social links (optional)
+social_links:
+  github: "https://github.com/mohamedmOoka"
+  linkedin: "https://www.linkedin.com/in/<your-linkedin>/"
