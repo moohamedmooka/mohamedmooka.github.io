@@ -1,73 +1,1049 @@
-<!-- في ملف projects.html، قم بتحديث روابط المشاريع -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Projects | mohamed mOoka - Cybersecurity Analyst</title>
+    <meta name="description" content="Explore cybersecurity projects including SOC implementations, threat analysis, vulnerability research, and security automation by mohamed mOoka.">
+    <meta name="keywords" content="cybersecurity projects, SOC lab, threat analysis, vulnerability research, security automation, digital forensics, CTF challenges">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/projects-detail.css">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Security Projects | mohamed mOoka">
+    <meta property="og:description" content="Cybersecurity projects showcasing SOC implementations, threat analysis, and security research.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mohamedmOoka.github.io/projects.html">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Cybersecurity Projects",
+        "description": "Collection of security projects by mohamed mOoka",
+        "author": {
+            "@type": "Person",
+            "name": "mohamed mOoka",
+            "jobTitle": "Cybersecurity Analyst",
+            "url": "https://mohamedmOoka.github.io"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- 🌌 Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- 📊 Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-<!-- Project 1: SOC Lab -->
-<div class="project-card" data-category="soc">
-    <div class="project-header">
-        <span class="project-badge featured">
-            <i class="fas fa-star"></i> Featured
-        </span>
-        <span class="project-date">
-            <i class="far fa-calendar"></i> Jan 2024
-        </span>
-    </div>
-    
-    <div class="project-icon">
-        <i class="fas fa-server"></i>
-    </div>
-    
-    <h3 class="project-title">Enterprise SOC Lab</h3>
-    <p class="project-description">
-        Full-scale Security Operations Center implementation...
-    </p>
-    
-    <div class="project-tech">
-        <span class="tech-tag">Wazuh</span>
-        <span class="tech-tag">ELK Stack</span>
-        <span class="tech-tag">Docker</span>
-    </div>
-    
-    <div class="project-links">
-        <a href="projects/enterprise-soc-lab.html" class="project-link">
-            <i class="fas fa-book"></i> View Details
-        </a>
-        <a href="https://github.com/yourusername/soc-lab" class="project-link" target="_blank">
-            <i class="fab fa-github"></i> Code
-        </a>
-    </div>
-</div>
+    <!-- 🔐 Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="nav-logo-link" aria-label="Home">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">mOoka</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i> <span class="nav-text">Home</span>
+                </a>
+                <a href="projects.html" class="nav-link active" aria-current="page">
+                    <i class="fas fa-code"></i> <span class="nav-text">Projects</span>
+                </a>
+                <a href="index.html#skills" class="nav-link">
+                    <i class="fas fa-tools"></i> <span class="nav-text">Skills</span>
+                </a>
+                <a href="index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i> <span class="nav-text">Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="security-status" aria-label="Security status: Secured">
+                    <span class="status-dot active"></span>
+                    <span class="status-text">Projects Secured</span>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<!-- Project 2: Network Analysis -->
-<div class="project-card" data-category="forensics">
-    <div class="project-header">
-        <span class="project-badge">
-            <i class="fas fa-shield-alt"></i> Security
-        </span>
-        <span class="project-date">
-            <i class="far fa-calendar"></i> Dec 2023
-        </span>
+    <!-- 🚀 Projects Hero -->
+    <section class="projects-hero" id="projects-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Security</span>
+                    <span class="title-line highlight">Projects</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Real-world security implementations, threat analyses, and defensive architectures.
+                    Each project represents practical experience in cybersecurity operations.
+                </p>
+                
+                <div class="project-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="20">0</span>
+                        <span class="stat-label">Completed Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Security Tools</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="8">0</span>
+                        <span class="stat-label">Research Papers</span>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#projectsContainer" class="btn btn-primary">
+                        <i class="fas fa-arrow-down"></i> Explore Projects
+                    </a>
+                    <a href="index.html#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Discuss Project
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="title">projects@security-analyst:~</div>
+                    </div>
+                    <div class="terminal-content">
+                        <code>
+                            <span class="prompt">$</span> find ./security-projects -type f -name "*.md"<br>
+                            <span class="output">
+                                ./enterprise-soc-lab/README.md<br>
+                                ./network-threat-analysis/report.md<br>
+                                ./vulnerability-research/findings.md<br>
+                                ./security-automation/scripts.md<br>
+                                ./incident-response/cases.md<br>
+                            </span>
+                            <span class="prompt">$</span> <span class="cursor">█</span>
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔧 Projects Filter -->
+    <section class="projects-filter" id="projects-filter">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" 
+                           id="projectSearch" 
+                           placeholder="Search projects by name, technology, or skill..."
+                           aria-label="Search projects">
+                </div>
+                
+                <div class="filter-tags" role="tablist" aria-label="Project categories">
+                    <button class="filter-tag active" 
+                            data-filter="all" 
+                            role="tab" 
+                            aria-selected="true" 
+                            aria-controls="projectsContainer">
+                        All Projects
+                    </button>
+                    <button class="filter-tag" 
+                            data-filter="soc" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="projectsContainer">
+                        SOC Operations
+                    </button>
+                    <button class="filter-tag" 
+                            data-filter="forensics" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="projectsContainer">
+                        Digital Forensics
+                    </button>
+                    <button class="filter-tag" 
+                            data-filter="automation" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="projectsContainer">
+                        Automation
+                    </button>
+                    <button class="filter-tag" 
+                            data-filter="research" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="projectsContainer">
+                        Research
+                    </button>
+                    <button class="filter-tag" 
+                            data-filter="tools" 
+                            role="tab" 
+                            aria-selected="false" 
+                            aria-controls="projectsContainer">
+                        Tool Development
+                    </button>
+                </div>
+                
+                <div class="filter-info">
+                    <span id="projectsCount">6 projects found</span>
+                    <button class="filter-reset" id="filterReset" aria-label="Reset filters">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📁 Projects Grid -->
+    <section class="projects-grid-section" id="projects-grid">
+        <div class="container">
+            <div class="projects-container" id="projectsContainer" role="tabpanel">
+                <!-- Project 1: SOC Lab -->
+                <article class="project-card" 
+                         data-category="soc" 
+                         data-search="Enterprise SOC Lab Wazuh ELK Stack Docker Python Grafana SIEM Security Operations Center">
+                    <div class="project-header">
+                        <span class="project-badge featured">
+                            <i class="fas fa-star"></i> Featured
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Jan 2024
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-server" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Enterprise SOC Lab</h3>
+                    <p class="project-description">
+                        Full-scale Security Operations Center implementation with SIEM integration, 
+                        threat intelligence feeds, automated incident response, and real-time 
+                        dashboard for security monitoring.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Wazuh</span>
+                        <span class="tech-tag">ELK Stack</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Grafana</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time threat detection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automated alerting system</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Compliance reporting</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/enterprise-soc-lab.html" class="project-link">
+                            <i class="fas fa-book"></i> View Details
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/enterprise-soc-lab" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="#demo" class="project-link">
+                            <i class="fas fa-video"></i> Demo
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Project 2: Network Analysis -->
+                <article class="project-card" 
+                         data-category="forensics" 
+                         data-search="Network Threat Analysis Wireshark Zeek Suricata Python PCAP Analysis IDS">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-shield-alt"></i> Security
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Dec 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Network Threat Analysis</h3>
+                    <p class="project-description">
+                        Comprehensive network traffic analysis project using packet capture files 
+                        to identify malicious patterns, analyze attack vectors, and implement 
+                        defensive countermeasures.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">Zeek</span>
+                        <span class="tech-tag">Suricata</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PCAP Analysis</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Malware traffic analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>IDS rule development</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Attack pattern recognition</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/network-threat-analysis.html" class="project-link">
+                            <i class="fas fa-file-alt"></i> View Report
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/network-analysis" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Scripts
+                        </a>
+                        <a href="#analysis" class="project-link">
+                            <i class="fas fa-chart-line"></i> Analysis
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Project 3: Vulnerability Research -->
+                <article class="project-card" 
+                         data-category="research" 
+                         data-search="Vulnerability Research OWASP Burp Suite Nuclei Python Fuzzing Web Security">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-bug"></i> Research
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Nov 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Vulnerability Research</h3>
+                    <p class="project-description">
+                        Security research focusing on web application vulnerabilities, including 
+                        discovery, exploitation analysis, and responsible disclosure coordination 
+                        with affected organizations.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">OWASP Top 10</span>
+                        <span class="tech-tag">Burp Suite</span>
+                        <span class="tech-tag">Nuclei</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Fuzzing</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Vulnerability discovery</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Proof of concept development</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Responsible disclosure</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/vulnerability-research.html" class="project-link">
+                            <i class="fas fa-scroll"></i> View Research
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/vulnerability-research" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i> PoC Code
+                        </a>
+                        <a href="#methodology" class="project-link">
+                            <i class="fas fa-book"></i> Methodology
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Project 4: Security Automation -->
+                <article class="project-card" 
+                         data-category="automation" 
+                         data-search="Security Automation Python Bash APIs Docker CI/CD SOC Efficiency">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-robot"></i> Automation
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Oct 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-cogs" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Security Automation Suite</h3>
+                    <p class="project-description">
+                        Collection of Python scripts and tools designed to automate repetitive 
+                        security tasks, enhance SOC efficiency, and streamline incident 
+                        response workflows.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">APIs</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">CI/CD</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Log analysis automation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Threat intelligence collection</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Reporting generation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/security-automation.html" class="project-link">
+                            <i class="fab fa-github"></i> View Repository
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/security-automation" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i> Documentation
+                        </a>
+                        <a href="#examples" class="project-link">
+                            <i class="fas fa-play-circle"></i> Examples
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Project 5: Digital Forensics -->
+                <article class="project-card" 
+                         data-category="forensics" 
+                         data-search="Digital Forensics Analysis Autopsy Volatility FTK Imager Timeline Analysis Memory Forensics">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-search"></i> Forensics
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Sep 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-hdd" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Digital Forensics Analysis</h3>
+                    <p class="project-description">
+                        Digital forensics investigation project involving memory analysis, 
+                        disk imaging, artifact extraction, and timeline reconstruction for 
+                        incident response scenarios.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Autopsy</span>
+                        <span class="tech-tag">Volatility</span>
+                        <span class="tech-tag">FTK Imager</span>
+                        <span class="tech-tag">Timeline Analysis</span>
+                        <span class="tech-tag">Evidence Handling</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Memory forensics</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>File system analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Timeline reconstruction</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/digital-forensics.html" class="project-link">
+                            <i class="fas fa-file-medical"></i> View Report
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/digital-forensics" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-tools"></i> Tools
+                        </a>
+                        <a href="#methodology" class="project-link">
+                            <i class="fas fa-project-diagram"></i> Methodology
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Project 6: CTF Challenges -->
+                <article class="project-card" 
+                         data-category="tools" 
+                         data-search="CTF Challenge Solutions Cryptography Reverse Engineering Web Exploitation Steganography Binary Analysis">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-flag"></i> CTF
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Aug 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">CTF Challenge Solutions</h3>
+                    <p class="project-description">
+                        Collection of Capture The Flag challenge solutions and walkthroughs, 
+                        focusing on cryptography, reverse engineering, web exploitation, and 
+                        forensics challenges.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Cryptography</span>
+                        <span class="tech-tag">Reverse Engineering</span>
+                        <span class="tech-tag">Web Exploitation</span>
+                        <span class="tech-tag">Steganography</span>
+                        <span class="tech-tag">Binary Analysis</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Challenge walkthroughs</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Solution scripts</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Learning resources</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/ctf-challenges.html" class="project-link">
+                            <i class="fas fa-walking"></i> View Walkthroughs
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/ctf-solutions" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-code"></i> Solutions
+                        </a>
+                        <a href="#resources" class="project-link">
+                            <i class="fas fa-graduation-cap"></i> Resources
+                        </a>
+                    </div>
+                </article>
+                
+                <!-- Hidden Projects for Load More -->
+                <article class="project-card hidden-project" 
+                         data-category="automation" 
+                         data-search="Threat Intelligence Platform Python Flask REST API Dashboard">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-brain"></i> Intelligence
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Jul 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-chart-network" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Threat Intelligence Platform</h3>
+                    <p class="project-description">
+                        Custom threat intelligence platform aggregating data from multiple sources, 
+                        providing real-time analysis, correlation, and visualization of threats.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">Dashboard</span>
+                        <span class="tech-tag">Data Analytics</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time threat feed</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>IOC management</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automated reporting</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/threat-intelligence.html" class="project-link">
+                            <i class="fas fa-eye"></i> View Platform
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/threat-intelligence" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="project-card hidden-project" 
+                         data-category="research" 
+                         data-search="Malware Analysis Sandbox Cuckoo Volatility YARA Python">
+                    <div class="project-header">
+                        <span class="project-badge">
+                            <i class="fas fa-virus"></i> Malware
+                        </span>
+                        <span class="project-date">
+                            <i class="far fa-calendar"></i> Jun 2023
+                        </span>
+                    </div>
+                    
+                    <div class="project-icon">
+                        <i class="fas fa-microscope" aria-hidden="true"></i>
+                    </div>
+                    
+                    <h3 class="project-title">Malware Analysis Lab</h3>
+                    <p class="project-description">
+                        Safe environment for malware analysis with automated sandbox, 
+                        behavioral analysis tools, and signature generation capabilities.
+                    </p>
+                    
+                    <div class="project-tech">
+                        <span class="tech-tag">Cuckoo Sandbox</span>
+                        <span class="tech-tag">Volatility</span>
+                        <span class="tech-tag">YARA</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Virtualization</span>
+                    </div>
+                    
+                    <div class="project-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automated analysis</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Behavioral monitoring</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Signature generation</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-links">
+                        <a href="projects/malware-analysis.html" class="project-link">
+                            <i class="fas fa-file-contract"></i> View Analysis
+                        </a>
+                        <a href="https://github.com/mohamedmOoka/malware-analysis" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> Lab Setup
+                        </a>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="loadMore" class="btn btn-outline" aria-expanded="false">
+                    <i class="fas fa-plus"></i> <span id="loadMoreText">Load More Projects (2 remaining)</span>
+                </button>
+                <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i> Loading...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔐 Admin Panel (Hidden) -->
+    <div id="adminPanel" class="admin-panel" role="dialog" aria-label="Project management panel" aria-hidden="true">
+        <div class="admin-header">
+            <h4><i class="fas fa-user-shield"></i> Project Management</h4>
+            <button class="admin-close" id="adminClose" aria-label="Close admin panel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="admin-actions">
+            <button class="admin-btn" id="addProject">
+                <i class="fas fa-plus"></i> Add Project
+            </button>
+            <button class="admin-btn" id="editProject">
+                <i class="fas fa-edit"></i> Edit Project
+            </button>
+            <button class="admin-btn" id="exportProjects">
+                <i class="fas fa-download"></i> Export
+            </button>
+        </div>
+        <small>Admin tools - Ctrl+Shift+M to toggle</small>
     </div>
+
+    <!-- 🏁 Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">mohamed mOoka</span>
+                    </div>
+                    <p class="tagline">Building secure digital environments</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Explore</h4>
+                        <a href="index.html">Home</a>
+                        <a href="#projects-hero">Projects</a>
+                        <a href="index.html#skills">Skills</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/mohamedmOoka" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://linkedin.com/in/mohamed-mooka" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="mailto:mohamed.ashraf.abdallah65@gmail.com">Email</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="blog.html">Security Blog</a>
+                        <a href="tools.html">Tool Repository</a>
+                        <a href="research.html">Research Papers</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© <span id="currentYear"></span> mohamed mOoka. All security projects are for educational purposes.</p>
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secured with Advanced Encryption</span>
+                    </div>
+                </div>
+                
+                <div class="footer-actions">
+                    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                        <i class="fas fa-arrow-up"></i> Back to Top
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ✨ JavaScript -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projects-admin.js"></script>
+    <script src="js/projects-filter.js"></script>
+    <script src="js/projects-handler.js"></script>
     
-    <div class="project-icon">
-        <i class="fas fa-network-wired"></i>
-    </div>
+    <!-- Projects Page Specific Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (mobileMenuToggle && navMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    this.classList.toggle('active');
+                    this.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+                });
+                
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                        navMenu.classList.remove('active');
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+            
+            // Filter reset functionality
+            const filterReset = document.getElementById('filterReset');
+            if (filterReset) {
+                filterReset.addEventListener('click', function() {
+                    document.getElementById('projectSearch').value = '';
+                    document.querySelectorAll('.filter-tag').forEach(tag => {
+                        tag.classList.remove('active');
+                        tag.setAttribute('aria-selected', 'false');
+                    });
+                    document.querySelector('[data-filter="all"]').classList.add('active');
+                    document.querySelector('[data-filter="all"]').setAttribute('aria-selected', 'true');
+                    
+                    // Trigger filter
+                    document.querySelector('[data-filter="all"]').click();
+                });
+            }
+            
+            // Update projects count
+            function updateProjectsCount() {
+                const visibleProjects = document.querySelectorAll('.project-card:not([style*="display: none"])').length;
+                const totalProjects = document.querySelectorAll('.project-card').length;
+                document.getElementById('projectsCount').textContent = 
+                    `${visibleProjects} of ${totalProjects} projects shown`;
+            }
+            
+            // Initial count update
+            updateProjectsCount();
+            
+            // Observe filter changes
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    setTimeout(updateProjectsCount, 350); // Wait for animations
+                });
+            });
+            
+            // Observe search input
+            const searchInput = document.getElementById('projectSearch');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    setTimeout(updateProjectsCount, 350);
+                });
+            }
+            
+            // Load More functionality
+            const loadMoreBtn = document.getElementById('loadMore');
+            const hiddenProjects = document.querySelectorAll('.hidden-project');
+            
+            if (loadMoreBtn && hiddenProjects.length > 0) {
+                let projectsToShow = 3;
+                let currentShown = 0;
+                
+                function updateLoadMoreButton() {
+                    const remaining = hiddenProjects.length - currentShown;
+                    if (remaining <= 0) {
+                        loadMoreBtn.style.display = 'none';
+                    } else {
+                        document.getElementById('loadMoreText').textContent = 
+                            `Load More Projects (${remaining} remaining)`;
+                    }
+                }
+                
+                loadMoreBtn.addEventListener('click', function() {
+                    const loadingSpinner = document.getElementById('loadingSpinner');
+                    
+                    // Show loading
+                    this.style.display = 'none';
+                    loadingSpinner.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        // Show next batch of projects
+                        for (let i = currentShown; i < currentShown + projectsToShow && i < hiddenProjects.length; i++) {
+                            hiddenProjects[i].style.display = 'block';
+                            setTimeout(() => {
+                                hiddenProjects[i].style.opacity = '1';
+                                hiddenProjects[i].style.transform = 'translateY(0)';
+                            }, 100 * (i - currentShown));
+                        }
+                        
+                        currentShown += projectsToShow;
+                        
+                        // Update button
+                        loadingSpinner.style.display = 'none';
+                        if (currentShown < hiddenProjects.length) {
+                            this.style.display = 'inline-flex';
+                        }
+                        
+                        updateLoadMoreButton();
+                        updateProjectsCount();
+                        
+                        // Scroll to newly loaded projects
+                        const lastLoaded = hiddenProjects[Math.min(currentShown, hiddenProjects.length) - 1];
+                        if (lastLoaded) {
+                            lastLoaded.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }, 800);
+                });
+                
+                // Initial update
+                updateLoadMoreButton();
+            }
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Close mobile menu on escape
+                if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                }
+                
+                // Focus search on Ctrl+K
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    const searchInput = document.getElementById('projectSearch');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }
+            });
+            
+            // Print functionality
+            const printButton = document.createElement('button');
+            printButton.className = 'btn btn-secondary print-btn';
+            printButton.innerHTML = '<i class="fas fa-print"></i> Print Projects';
+            printButton.style.margin = '20px auto';
+            printButton.style.display = 'block';
+            
+            printButton.addEventListener('click', function() {
+                window.print();
+            });
+            
+            document.querySelector('.load-more-container').appendChild(printButton);
+            
+            // Add animation to cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+            
+            document.querySelectorAll('.project-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            // Initialize tooltips for tech tags
+            document.querySelectorAll('.tech-tag').forEach(tag => {
+                tag.setAttribute('title', `Filter by ${tag.textContent}`);
+                tag.setAttribute('tabindex', '0');
+                
+                tag.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        const filterTag = document.querySelector(`[data-filter="${this.textContent.toLowerCase()}"]`);
+                        if (filterTag) {
+                            filterTag.click();
+                        }
+                    }
+                });
+            });
+        });
+    </script>
     
-    <h3 class="project-title">Network Threat Analysis</h3>
-    <p class="project-description">
-        Comprehensive network traffic analysis project...
-    </p>
-    
-    <div class="project-tech">
-        <span class="tech-tag">Wireshark</span>
-        <span class="tech-tag">Zeek</span>
-        <span class="tech-tag">Python</span>
-    </div>
-    
-    <div class="project-links">
-        <a href="projects/network-threat-analysis.html" class="project-link">
-            <i class="fas fa-book"></i> View Details
-        </a>
-        <a href="https://github.com/yourusername/network-analysis" class="project-link" target="_blank">
-            <i class="fab fa-github"></i> Code
-        </a>
-    </div>
-</div>
+    <!-- Print Styles -->
+    <style media="print">
+        @media print {
+            .nav, 
+            .projects-filter, 
+            .admin-panel, 
+            .back-to-top, 
+            .print-btn,
+            .theme-toggle,
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .project-card {
+                break-inside: avoid;
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+            }
+            
+            .hero-visual,
+            .animated-bg,
+            #particles-js {
+                display: none !important;
+            }
+            
+            .footer {
+                border-top: 1px solid #ddd;
+                background: white !important;
+                color: black !important;
+            }
+            
+            a {
+                color: black !important;
+                text-decoration: none !important;
+            }
+            
+            .btn, .project-link {
+                border: 1px solid #ddd !important;
+                background: white !important;
+                color: black !important;
+            }
+            
+            .badge, .project-badge {
+                border: 1px solid #ddd !important;
+                background: white !important;
+                color: black !important;
+            }
+        }
+    </style>
+</body>
+</html>
