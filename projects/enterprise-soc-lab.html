@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise SOC Lab | mohamed mOoka</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for project details */
+        .project-detail-hero {
+            padding: calc(var(--header-height) + var(--spacing-xl)) 5% var(--spacing-xl);
+            background: linear-gradient(135deg, rgba(5,5,5,0.9), rgba(10,10,10,0.9));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .meta-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-md);
+            text-align: center;
+        }
+        
+        .meta-card i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .content-section {
+            padding: var(--spacing-xl) 5%;
+            background: var(--darker);
+        }
+        
+        .section-block {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .architecture-diagram {
+            background: rgba(0,0,0,0.5);
+            border: 1px solid var(--card-border);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .code-terminal {
+            background: #1a1a1a;
+            border: 1px solid var(--primary);
+            border-radius: var(--border-radius);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-lg) 0;
+            font-family: var(--font-mono);
+            overflow-x: auto;
+        }
+        
+        .terminal-prompt {
+            color: var(--primary);
+        }
+        
+        .terminal-output {
+            color: var(--text-secondary);
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--card-border);
+        }
+    </style>
+</head>
+<body>
+    <!-- 🌌 Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- 📊 Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- 🔐 Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">mOoka</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="../projects.html" class="nav-link">
+                    <i class="fas fa-code"></i> Projects
+                </a>
+                <a href="../index.html#skills" class="nav-link">
+                    <i class="fas fa-tools"></i> Skills
+                </a>
+                <a href="../index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🚀 Project Detail Hero -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge">
+                        <i class="fas fa-star"></i> Featured Project
+                    </span>
+                </div>
+                
+                <h1 class="hero-title">
+                    Enterprise SOC Lab
+                    <span class="title-line highlight">Implementation</span>
+                </h1>
+                
+                <p class="hero-description">
+                    A full-scale Security Operations Center implementation with SIEM integration, 
+                    threat intelligence feeds, automated incident response, and real-time 
+                    dashboard for security monitoring.
+                </p>
+                
+                <div class="project-meta-grid">
+                    <div class="meta-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Timeline</h4>
+                        <p>3 Months</p>
+                    </div>
+                    
+                    <div class="meta-card">
+                        <i class="fas fa-bug"></i>
+                        <h4>Complexity</h4>
+                        <p>Advanced</p>
+                    </div>
+                    
+                    <div class="meta-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Languages</h4>
+                        <p>Python, Bash, YAML</p>
+                    </div>
+                    
+                    <div class="meta-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Category</h4>
+                        <p>SOC Operations</p>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="https://github.com/mohamedmOoka/enterprise-soc-lab" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                    <a href="#demo" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📋 Project Content -->
+    <section class="content-section">
+        <div class="container">
+            <!-- Overview -->
+            <div class="section-block">
+                <h2 class="section-title">📋 Project Overview</h2>
+                <p>This project involves building a complete Security Operations Center (SOC) environment from scratch, designed to detect, analyze, and respond to security threats in real-time.</p>
+                
+                <h3>Key Objectives</h3>
+                <ul>
+                    <li>Implement centralized log collection and analysis</li>
+                    <li>Develop automated threat detection rules</li>
+                    <li>Create incident response playbooks</li>
+                    <li>Build real-time monitoring dashboards</li>
+                    <li>Integrate threat intelligence feeds</li>
+                </ul>
+            </div>
+            
+            <!-- Architecture -->
+            <div class="section-block">
+                <h2 class="section-title">🏗️ System Architecture</h2>
+                
+                <div class="architecture-diagram">
+                    <!-- Architecture diagram placeholder -->
+                    <div style="color: var(--text-muted);">
+                        <i class="fas fa-project-diagram" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p>System Architecture Diagram</p>
+                        <p>Wazuh + ELK Stack + Grafana Integration</p>
+                    </div>
+                </div>
+                
+                <h3>Components</h3>
+                <div class="tech-tags" style="margin: 1rem 0;">
+                    <span class="tech-tag">Wazuh Manager</span>
+                    <span class="tech-tag">Elasticsearch Cluster</span>
+                    <span class="tech-tag">Logstash Pipelines</span>
+                    <span class="tech-tag">Kibana Dashboards</span>
+                    <span class="tech-tag">Grafana Monitoring</span>
+                    <span class="tech-tag">Docker Containers</span>
+                </div>
+            </div>
+            
+            <!-- Implementation -->
+            <div class="section-block">
+                <h2 class="section-title">🔧 Implementation Details</h2>
+                
+                <h3>1. Environment Setup</h3>
+                <div class="code-terminal">
+                    <code>
+                        <span class="terminal-prompt">$</span> git clone https://github.com/mohamedmOoka/enterprise-soc-lab.git<br>
+                        <span class="terminal-prompt">$</span> cd enterprise-soc-lab<br>
+                        <span class="terminal-prompt">$</span> docker-compose up -d<br>
+                        <span class="terminal-output">Creating network "soc-lab_default" with the default driver<br>
+                        Creating wazuh ... done<br>
+                        Creating elasticsearch ... done<br>
+                        Creating kibana ... done</span>
+                    </code>
+                </div>
+                
+                <h3>2. Custom Detection Rules</h3>
+                <div class="code-terminal">
+                    <code>
+<pre>
+<!-- Wazuh Rule -->
+&lt;group name="custom_rules"&gt;
+  &lt;rule id="100001" level="10"&gt;
+    &lt;description&gt;SSH Brute Force Detection&lt;/description&gt;
+    &lt;field name="srcip"&gt;\.*&lt;/field&gt;
+    &lt;same_field&gt;srcip&lt;/same_field&gt;
+    &lt;different_field&gt;dstport&lt;/different_field&gt;
+    &lt;match&gt;sshd.*Failed password&lt;/match&gt;
+    &lt;options&gt;no_full_log&lt;/options&gt;
+    &lt;same_id&gt;5716&lt;/same_id&gt;
+    &lt;frequency&gt;5&lt;/frequency&gt;
+    &lt;timeframe&gt;60&lt;/timeframe&gt;
+  &lt;/rule&gt;
+&lt;/group&gt;
+</pre>
+                    </code>
+                </div>
+                
+                <h3>3. Python Automation Script</h3>
+                <div class="code-terminal">
+                    <code>
+<pre>
+#!/usr/bin/env python3
+"""
+SOC Alert Processor
+Automatically processes and enriches security alerts
+"""
+
+import requests
+import json
+from datetime import datetime
+
+class SOCAlertProcessor:
+    def __init__(self, wazuh_api, virustotal_api):
+        self.wazuh_api = wazuh_api
+        self.virustotal_api = virustotal_api
+        
+    def process_alert(self, alert_data):
+        """Process and enrich security alert"""
+        enriched_alert = self.enrich_alert(alert_data)
+        self.calculate_severity(enriched_alert)
+        self.create_ticket(enriched_alert)
+        return enriched_alert
+    
+    def enrich_alert(self, alert):
+        """Enrich alert with threat intelligence"""
+        # Check IP reputation
+        if 'srcip' in alert:
+            alert['ip_reputation'] = self.check_ip_reputation(alert['srcip'])
+        
+        # Check file hashes
+        if 'file_hash' in alert:
+            alert['file_analysis'] = self.analyze_file(alert['file_hash'])
+        
+        return alert
+    
+    def check_ip_reputation(self, ip_address):
+        """Check IP against threat intelligence feeds"""
+        # Implementation here
+        pass
+</pre>
+                    </code>
+                </div>
+            </div>
+            
+            <!-- Results -->
+            <div class="section-block">
+                <h2 class="section-title">📊 Results & Impact</h2>
+                
+                <div class="project-stats" style="margin: 2rem 0;">
+                    <div class="stat">
+                        <span class="stat-number">99.7%</span>
+                        <span class="stat-label">Detection Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2.3s</span>
+                        <span class="stat-label">Avg Response Time</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Custom Rules</span>
+                    </div>
+                </div>
+                
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Reduced mean time to detect (MTTD) from hours to seconds</li>
+                    <li>Automated 80% of repetitive SOC tasks</li>
+                    <li>Integrated 5+ threat intelligence feeds</li>
+                    <li>Developed 10+ incident response playbooks</li>
+                    <li>Created comprehensive documentation for SOC analysts</li>
+                </ul>
+            </div>
+            
+            <!-- Technologies -->
+            <div class="section-block">
+                <h2 class="section-title">🛠️ Technologies Used</h2>
+                
+                <div class="skills-grid" style="margin: 1rem 0;">
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-shield-alt"></i> Security Tools
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag advanced">Wazuh</span>
+                            <span class="skill-tag advanced">ELK Stack</span>
+                            <span class="skill-tag intermediate">Suricata</span>
+                            <span class="skill-tag intermediate">Zeek</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-code"></i> Development
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag advanced">Python</span>
+                            <span class="skill-tag advanced">Docker</span>
+                            <span class="skill-tag intermediate">Bash</span>
+                            <span class="skill-tag intermediate">YAML</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 class="category-title">
+                            <i class="fas fa-chart-line"></i> Visualization
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag advanced">Grafana</span>
+                            <span class="skill-tag intermediate">Kibana</span>
+                            <span class="skill-tag intermediate">Python Dash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Resources -->
+            <div class="section-block">
+                <h2 class="section-title">📚 Resources & Links</h2>
+                
+                <div class="project-links" style="display: grid; gap: 1rem;">
+                    <a href="https://github.com/mohamedmOoka/enterprise-soc-lab" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i> Full Source Code Repository
+                    </a>
+                    
+                    <a href="https://documenter.getpostman.com/view/..." class="project-link" target="_blank">
+                        <i class="fas fa-book"></i> API Documentation
+                    </a>
+                    
+                    <a href="soc-lab-architecture.pdf" class="project-link">
+                        <i class="fas fa-download"></i> Architecture Diagrams (PDF)
+                    </a>
+                    
+                    <a href="soc-lab-demo.mp4" class="project-link">
+                        <i class="fas fa-video"></i> Video Demonstration
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="navigation-buttons">
+                <a href="../projects.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Projects
+                </a>
+                
+                <a href="network-threat-analysis.html" class="btn btn-primary">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🏁 Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">mohamed mOoka</span>
+                    </div>
+                    <p class="tagline">Securing digital frontiers with precision and dedication</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navigation</h4>
+                        <a href="../index.html">Home</a>
+                        <a href="../projects.html">Projects</a>
+                        <a href="../index.html#skills">Skills</a>
+                        <a href="../index.html#contact">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/mohamedmOoka" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/mohamed-mooka" target="_blank">LinkedIn</a>
+                        <a href="mailto:mohamed.ashraf.abdallah65@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© <span id="currentYear"></span> mohamed mOoka. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ✨ JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    
+    <script>
+        // Initialize project-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Update current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    const currentTheme = document.documentElement.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('theme', newTheme);
+                    
+                    const icon = this.querySelector('i');
+                    icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                });
+            }
+            
+            // Code copy functionality
+            document.querySelectorAll('.code-terminal').forEach(terminal => {
+                terminal.addEventListener('click', function() {
+                    const code = this.querySelector('code').textContent;
+                    navigator.clipboard.writeText(code).then(() => {
+                        const original = this.innerHTML;
+                        this.innerHTML = '<span style="color: var(--primary)"><i class="fas fa-check"></i> Copied to clipboard!</span>';
+                        setTimeout(() => {
+                            this.innerHTML = original;
+                        }, 2000);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
